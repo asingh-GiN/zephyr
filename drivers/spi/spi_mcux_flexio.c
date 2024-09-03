@@ -100,6 +100,7 @@ static int spi_mcux_flexio_isr(void *user_data)
 	const struct device *dev = (const struct device *)user_data;
 	const struct spi_mcux_flexio_config *config = dev->config;
 	struct spi_mcux_flexio_data *data = dev->data;
+	//k_busy_wait(20);
 
 #if defined(CONFIG_SOC_SERIES_KE1XZ)
 	/* Wait until data transfer complete. */

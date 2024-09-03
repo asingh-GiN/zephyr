@@ -201,3 +201,10 @@ tests:
     platform_allow:
       - frdm_ke17z
       - frdm_ke17z512
+
+  drivers.spi.RT1170_flexio_spi.loopback:
+    extra_args: DTC_OVERLAY_FILE="boards/mimxrt1170_evk_mimxrt1176_cm7_A_with_flexio_spi.overlay"
+    filter: CONFIG_DT_HAS_NXP_FLEXIO_ENABLED and
+      CONFIG_DT_HAS_NXP_FLEXIO_SPI_ENABLED
+    platform_allow:
+      - mimxrt1170_evk/mimxrt1176/cm7
